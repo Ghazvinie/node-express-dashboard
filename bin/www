@@ -21,6 +21,7 @@ app.set("port", port);
  */
 
 const server = http.createServer(app);
+const wss = new WebSocket.Server({ http });
 
 /**
  * Listen on provided port, on all network interfaces.
