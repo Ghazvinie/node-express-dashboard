@@ -7,5 +7,5 @@ connection.onopen = () => {
 };
 
 connection.onmessage = (event) => {
-    logWindow.innerHTML = JSON.stringify(event);
+    logWindow.innerHTML = event.data;
 };
