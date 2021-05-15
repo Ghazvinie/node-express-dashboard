@@ -6,6 +6,6 @@ connection.onopen = () => {
     connection.send('Hello from the client!');
 };
 
-connection.onmessage = (data) => {
-    logWindow.innerHTML = JSON.stringify(data);
+connection.onmessage = (event) => {
+    logWindow.innerHTML = JSON.stringify(event);
 };
