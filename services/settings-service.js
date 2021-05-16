@@ -23,7 +23,7 @@ function getDefaultDir() {
   if (!defaultDir) {
     return process.cwd();
   }
-  return isValidDir(defaultDir) ? defaultDir : process.cwd;
+  return isValidDir(defaultDir) ? defaultDir : process.cwd();
 }
 
 function isValidDir(dirPath) {
