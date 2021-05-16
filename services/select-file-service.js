@@ -3,9 +3,9 @@ const path = require('path');
 
 let dir;
 
-module.exports = cwd = function() {
+exports.setcwd = (cwd) => {
     dir = cwd;
-}
+  };
 
 function getDirectoryContents(files, currentDir, query) {
     const data = [];
