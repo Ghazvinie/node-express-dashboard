@@ -4,7 +4,7 @@ const path = require('path');
 const settingsFilePath = path.join(__dirname, '../json/settings.json');
 
 function getSettings() {
-  const settingsData = fs.readFileSync();
+  const settingsData = fs.readFileSync(settingsFilePath);
   return JSON.parse(settingsData);
 }
 
