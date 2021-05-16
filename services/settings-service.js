@@ -11,7 +11,7 @@ function getSettings() {
 function writeSettings(newSettings) {
   const settingsJSON = JSON.stringify(newSettings, null, 2);
   try {
-    fs.writeFileSync(settingsJSON, settingsFilePath);
+    fs.writeFileSync(settingsFilePath, settingsJSON);
     return true;
   } catch (error) {
     return false;
@@ -23,7 +23,7 @@ function getDefaultDir() {
   if (!defaultDir) {
     return process.cwd;
   }
-  return isValidDir(defaultDir) ? defaultDir : process.cwd;  
+  return isValidDir(defaultDir) ? defaultDir : process.cwd;
 }
 
 function isValidDir(dirPath) {
@@ -31,7 +31,7 @@ function isValidDir(dirPath) {
     fs.readdirSync(dirPath);
     return true;
   } catch (error) {
-    return false;    
+    return false;
   }
 }
 
